@@ -1,0 +1,37 @@
+version: '3'
+
+services:
+  godot:
+    build:
+      context: .devcontainer
+      dockerfile: Dockerfile
+    environment:
+      - DISPLAY=:99
+      - XDG_RUNTIME_DIR=/tmp/runtime-dir
+    volumes:
+      - /home/david/tmp_projects/godot:/workspaces/godot
+    # ports:
+      # - "2222:22"
+    command: >
+      bash -c "mkdir -p /tmp/runtime-dir && chmod 700 /tmp/runtime-dir && sudo service ssh start && sudo cat /etc/ssh/sshd_config && sleep infinity"
+    restart: unless-stopped
+    network_mode: "service:vpn"
+    depends_on:
+      - vpn
+
+  vpn:
+    build: ./vpn
+    environment:
+      - VPN_USERNAME=${VPN_USERNAME}
+      - VPN_PASSWORD=${VPN_PASSWORD}
+    cap_add:
+      - NET_ADMIN
+    ports:
+      - "2222:22"
+    devices:
+      - /dev/net/tun
+    volumes:
+      - ./vpn:/etc/openvpn/client
+    restart: unless-stopped
+
+

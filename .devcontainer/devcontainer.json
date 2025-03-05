@@ -1,6 +1,8 @@
 {
   "name": "Godot Development Environment",
-  "dockerFile": "Dockerfile",
+  "dockerComposeFile": "../docker-compose.yml",
+  "service": "godot",
+  "workspaceFolder": "/workspaces/godot",
   "customizations": {
     "vscode": {
       "extensions": [
@@ -20,7 +22,6 @@
     "DISPLAY": ":99",
     "XDG_RUNTIME_DIR": "/tmp/runtime-dir"
   },
-  "appPort": ["2222:22"],
   "postCreateCommand": "mkdir -p /tmp/runtime-dir && chmod 700 /tmp/runtime-dir && sudo service ssh start && sudo cat /etc/ssh/sshd_config",
   "remoteUser": "vscode"
 }
