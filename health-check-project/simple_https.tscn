@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://c3xnl4yjcjkrx"]
+
+[ext_resource type="Script" path="res://simple_https.gd" id="1_5qhm8"]
+
+[node name="SimpleHTTPS" type="Node"]
+script = ExtResource("1_5qhm8")
