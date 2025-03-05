@@ -1,0 +1,58 @@
+# Godot-specific ignores
+.import/
+export.cfg
+export_presets.cfg
+.godot/
+
+# Imported translations (automatically generated from CSV files)
+*.translation
+
+# Mono-specific ignores
+.mono/
+data_*/
+mono_crash.*.json
+
+# System/tool-specific ignores
+.DS_Store
+*~
+*.blend1
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+
+# Build artifacts
+*.o
+*.os
+*.obj
+*.bc
+*.pyc
+*.dblite
+*.pdb
+*.lib
+*.config
+*.creator
+*.creator.user
+*.files
+*.includes
+*.idb
+
+# Logs and databases
+*.log
+*.sql
+*.sqlite
+
+# Builds and binaries
+bin/
+build/
+lib/
+*.exe
+*.dll
+*.so
+*.dylib
+
+# Editor backup files
+*.bak
+*.tmp
+*.swp

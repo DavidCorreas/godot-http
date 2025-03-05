@@ -1,0 +1,10 @@
+{
+  "godot_tools.editor_path": "/usr/local/bin/godot",
+  "godot_tools.gdscript_lsp_server_protocol": "tcp",
+  "godot_tools.gdscript_lsp_server_host": "127.0.0.1",
+  "godot_tools.gdscript_lsp_server_port": 6005,
+  "editor.formatOnSave": true,
+  "editor.formatOnType": true,
+  "editor.insertSpaces": true,
+  "editor.tabSize": 4
+}
